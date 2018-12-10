@@ -1,0 +1,709 @@
+<section class="main-bg">
+  <!-- Start header-->
+  <app-header></app-header>
+  <div class="clearfix"></div>
+  <!-- end header-->
+  <!-- Start search part-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pest-control-box mt-4">
+          <div class="pest-control-search">
+            <input type="search" placeholder="Search, rat, spider, wasp, racoon. gopher, etc..." />
+            <div class="pest-dropdown">
+              <div class="dropdown">
+                <button type="button" class="help-primary dropdown-toggle" data-toggle="dropdown"> Pest Control </button>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="#">Pest Control 1</a> <a class="dropdown-item" href="#">Pest Control 2</a> <a class="dropdown-item" href="#">Pest Control 3</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="pest-control-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group pesttype">
+                  <select theme="dark" class="form-control" width="" style="" placeholder="Pest Type" data-search="true">
+                    <option value="In"><strong>Insects</strong></option>
+                    <option value="Be">Bedbugs </option>
+                    <option value="Te">Termites</option>
+                    <option value="Wa">Wasps</option>
+                    <option value="Mi"><strong>Mites</strong></option>
+                    <option value="RSM">Red Spider Mite</option>
+                    <option value="PU">Panonychus Ulmi</option>
+                    <option value="CM">Cyclamen Mite</option>
+                    <option value="DBM">Dry Bulb Mite</option>
+                    <option value="Ro"><strong>Rodents</strong></option>
+                    <option value="Ra">Rats</option>
+                    <option value="Go">Gopher</option>
+                    <option value="An"><strong>Animals</strong></option>
+                    <option value="Bi"><strong>Birds</strong></option>
+                    <option value="Pi">Pigeon</option>
+                    <option value="Cr">Crow</option>
+                    <option value="Sp">Sparrow</option>
+                    <option value="Pa">Parrot</option>
+                  </select>
+                  <!-- <select>
+                    <option data-display="Pest Type">Pest Type</option>
+                    <option value="1">Insects</option>
+                    <option value="2">Mites</option>
+                    <option value="3">Rodents</option>
+                    <option value="4">Animals</option>
+                    <option value="5">Birds</option>
+                  </select>-->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group drop-d">
+                  <select>
+                    <option data-display="Customer Type">Customer Type</option>
+                    <option value="1">Residential</option>
+                    <option value="2">Commercial</option>
+                    <option value="3">Industrial</option>
+                    <option value="4">Agricultural</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control datepicker calender-box" placeholder="MM/DD/YY" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" placeholder="HH:MM AM"/>
+                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                      <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="relative">
+                    <input class=" form-control" type="text" placeholder="Service location" />
+                    <i class="location"><img src="../../assets/images/location.png" alt=""></i> </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="radio-cont">
+                  <label class="container1">One-time
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span> </label>
+                  <label class="container1">Recurring
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span> </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="slidecontainer">
+                  <div class="slider-labels">
+                    <div class="caption"> <strong>Area</strong>
+                      <div class="value-t"> <span id="slider-range-value1"></span> <span id="slider-range-value2"></span> </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div id="slider-range"></div>
+                  <div class="col-sm-12">
+                    <form>
+                      <input type="hidden" name="min-value" value="">
+                      <input type="hidden" name="max-value" value="">
+                    </form>
+                  </div>
+
+                  <!--<p>Area: <span id="demo"></span></p>
+                  <input type="range" min="1" max="1000" value="10" class="slider1" id="myRange">-->
+                </div>
+              </div>
+              <div class="col-md-5">
+                <label class="custom-checkbox"> Eco-Friendly
+                  <input type="checkbox">
+                  <span class="checkmark1"></span> </label>
+
+                <!--<div class="eco-friendly">
+                  <label>Eco-Friendly</label>
+                  <img src="images/success.png" /> </div>-->
+              </div>
+              <div class="clearfix"></div>
+              <div class="search-btn  search-posi"> <a href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a> <span class="free">Free</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="find-section">
+          <h1>Find Service Providers</h1>
+          <h3>Nearby. Qualified. Providers. Now.</h3>
+          <ul class="find-s-points">
+            <li>Eliminate door-to-door salesmen</li>
+            <li>Find the nearest qualified provider</li>
+            <li>Compare multiple offers</li>
+            <li>Review satisfaction scores</li>
+            <li>Save 25% or more</li>
+            <li>Get same-day service</li>
+            <li>Avoid long-term contracts</li>
+            <li>Earn points and win prizes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--get a discount code-->
+    <div class="get-discount">
+      <div class="get-con">
+        <h1>Get a discount code</h1>
+      </div>
+      <div class="get-con">
+        <input type="text" class="form-control c-box" placeholder="John Doe" />
+      </div>
+      <div class="get-con">
+        <input type="text" class="form-control c-box" placeholder="Mobile Phone" />
+      </div>
+      <div class="get-con">
+        <div class="callnow submit-btn"> <a href="#">Submit</a> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end search part-->
+
+  <div class="custom-slider">
+    <h1>Special Offers</h1>
+    <ul class="bxslider">
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/total_pest.png" /> </div>
+          <div class="price-con">
+            <h2>15% Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/valley-view.png" /> </div>
+          <div class="price-con">
+            <h2>$48 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box new">New</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/rc.png" /> </div>
+          <div class="price-con">
+            <h2>25% Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box featured">Featured</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/gregory.png" /> </div>
+          <div class="price-con">
+            <h2>$149 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/valley-view.png" /> </div>
+          <div class="price-con">
+            <h2>20% Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box new">New</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/rc.png" /> </div>
+          <div class="price-con">
+            <h2>$86 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box featured">Featured</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="../../assets/images/gregory.png" /> </div>
+          <div class="price-con">
+            <h2>30% Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section>
+  <!--<div class="custom-slider coupons-con">
+    <h1>Coupons</h1>
+    <ul class="bxslider">
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/total_pest.png" /> </div>
+          <div class="price-con">
+            <h2>$136 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/valley-view.png" /> </div>
+          <div class="price-con">
+            <h2>$48 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box new">New</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/rc.png" /> </div>
+          <div class="price-con">
+            <h2>$86 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box featured">Featured</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/gregory.png" /> </div>
+          <div class="price-con">
+            <h2>$149 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/total_pest.png" /> </div>
+          <div class="price-con">
+            <h2>$136 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box hot">Hot</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="box-bg">
+          <div class="logos"> <img src="images/valley-view.png" /> </div>
+          <div class="price-con">
+            <h2>$48 Off</h2>
+            <p>on total amount of<br>
+              $250 or above</p>
+          </div>
+          <div class="callnow submit-btn center-btn"> <a href="#">Redeem</a> </div>
+          <span class="add-box new">New</span>
+          <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+        </div>
+      </li>
+    </ul>
+  </div>-->
+</section>
+
+<!--testimonials-->
+<section>
+  <div class="custom-slider coupons-con">
+    <h1>See what others are saying about us</h1>
+    <ul class="bxslider testibox-con">
+      <li>
+        <div class="display-center">
+          <div class="testi-box">
+            <div class="text-content"> <img src="../../assets/images/star.png" class="img-display" />
+              <p>Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero.</p>
+            </div>
+          </div>
+          <div class="testi-img-cont">
+            <div class="testi-pic"> <img src="../../assets/images/pic1.png" /> </div>
+            <h4>Garry Colonsi</h4>
+            <p>Restaurant Owner</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="display-center">
+          <div class="testi-box">
+            <div class="text-content"> <img src="../../assets/images/star.png" class="img-display" />
+              <p>Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero.</p>
+            </div>
+          </div>
+          <div class="testi-img-cont">
+            <div class="testi-pic"> <img src="../../assets/images/pic1.png" /> </div>
+            <h4>Garry Colonsi</h4>
+            <p>Restaurant Owner</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="display-center">
+          <div class="testi-box">
+            <div class="text-content"> <img src="../../assets/images/star.png" class="img-display" />
+              <p>Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero.</p>
+            </div>
+          </div>
+          <div class="testi-img-cont">
+            <div class="testi-pic"> <img src="../../assets/images/pic2.png" /> </div>
+            <h4>Garry Colonsi</h4>
+            <p>Restaurant Owner</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="display-center">
+          <div class="testi-box">
+            <div class="text-content"> <img src="../../assets/images/star.png" class="img-display" />
+              <p>Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero.</p>
+            </div>
+          </div>
+          <div class="testi-img-cont">
+            <div class="testi-pic"> <img src="../../assets/images/pic3.png" /> </div>
+            <h4>Garry Colonsi</h4>
+            <p>Restaurant Owner</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!--trust factors-->
+<section>
+  <div class="container">
+    <div class="custom-slider coupons-con">
+      <h1>Trust Factors</h1>
+      <ul class="trust-slider mt15">
+        <li>
+          <div class="trust-bg"> <img src="../../assets/images/mcafee.png" alt="" /> </div>
+        </li>
+        <li>
+          <div class="trust-bg"> <img src="../../assets/images/business.png" alt="" /> </div>
+        </li>
+        <li>
+          <div class="trust-bg"> <img src="../../assets/images/norton.png" alt="" /> </div>
+        </li>
+        <li>
+          <div class="trust-bg"> <img src="../../assets/images/verisign.png" alt="" /> </div>
+        </li>
+        <li>
+          <div class="trust-bg"> <img src="../../assets/images/mcafee.png" alt="" /> </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
+<!--latest articals-->
+<section>
+  <div class="latest-articals-bg">
+    <div class="container">
+      <div class="custom-slider">
+        <h1 class="gap1">Browse the latest articles from our blog</h1>
+        <ul class="latest-articals">
+          <li>
+            <div class="latest-box">
+              <div class="latest-img"> <img src="../../assets/images/ant.png" alt="" />
+                <div class="date-box">30 <sup>OCT</sup></div>
+              </div>
+              <div class="latest-box-content">
+                <h5>Types of Ants that Might<br>
+                  Invade Your Home</h5>
+                <p>Ants are a pest that wanders in groups. They<br>
+                  rarely are spotted alone. Their tiny size makes...</p>
+                <div class="bookmark-con">
+                  <div class="heart bookmark-i"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
+                  <span>General</span> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="latest-box">
+              <div class="latest-img"> <img src="../../assets/images/rodent.png" alt="" />
+                <div class="date-box">30 <sup>OCT</sup></div>
+              </div>
+              <div class="latest-box-content">
+                <h5>Do you need help with<br>
+                  commercial rodent control?</h5>
+                <p>Rodent infestation can cost your business its<br>
+                  reputation. Believe it or not, but the presence...</p>
+                <div class="bookmark-con">
+                  <div class="heart bookmark-i"><i class="fa fa-shield" aria-hidden="true"></i></div>
+                  <span>Safety</span> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="latest-box">
+              <div class="latest-img"> <img src="../../assets/images/mosquito.png" alt="" />
+                <div class="date-box">30 <sup>OCT</sup></div>
+              </div>
+              <div class="latest-box-content">
+                <h5>Know Everything That Can Keep<br>
+                  You Safe from Mosquito Bites</h5>
+                <p>Mosquito bites are very irritating and the ugly<br>
+                  truth about them is the fact that they can...</p>
+                <div class="bookmark-con">
+                  <div class="heart bookmark-i"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
+                  <span>General</span> </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer-->
+<section>
+  <div class="container">
+    <!--get help now-->
+    <div class="get-help-bg get-help-h">
+      <div class="row">
+        <div class="col-sm-5 col-lg-5">
+          <h1 class="get-help-t">Get HelpNow</h1>
+          <a href="#" class="signup">Sign up today &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+        <div class="col-sm-7 col-lg-7">
+          <div class="get-help-btn">
+            <div class="search-btn mr15"> <a href="#">As a Customer</a> </div>
+            <div class="callnow submit-btn"> <a href="#">As a Provider</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center"><a href="index.html"><img src="../../assets/images/logo.png" alt="" /></a></div>
+    <div class="footer-menu">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="mb40">Contact Us</h5>
+          <ul class="contact-t">
+            <li> <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <p>4196 Bualo Creek Road, Nashville, TN 37211</p>
+            </li>
+            <li> <i class="fa fa-phone" aria-hidden="true"></i>
+              <p>1-800-HELPNOW</p>
+            </li>
+            <li> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <p>support@helpnow.com</p>
+            </li>
+            <li>
+              <p>Sign up for our newsletter to get updates, tips, <br>
+                and exclusive offers.</p>
+            </li>
+          </ul>
+          <div class="email-address">
+            <input type="email" value="" placeholder="Email Address">
+            <a href="#" class="email-btn"><img src="../../assets/images/tick.png" /></a> </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mb40">Info</h5>
+          <ul class="info">
+            <li> <a href="#">About us</a> </li>
+            <li> <a href="#">Newsroom</a> </li>
+            <li> <a href="#">Gift cards</a> </li>
+            <li> <a href="#">Become a Provider</a> </li>
+            <li> <a href="#">Become a Customer</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="mb40">Quick Links</h5>
+          <ul class="info no-before">
+            <li> <a href="#">Availability</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Help</a> </li>
+            <li> <a href="#">FAQs</a> </li>
+            <li> <a href="#">Blog</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mb40 m-n">&nbsp;</h5>
+          <ul class="info no-before">
+            <li> <a href="#">Loyalty Rewards</a> </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="app_btn"> <a href="#"><img src="../../assets/images/appstore.png" alt="Appstore" /></a> <a href="#"><img src="../../assets/images/playstore.png" alt="Playstore" /></a> </div>
+    <div class="social-icons"> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a> </div>
+    <div class="copy-right">
+      <ul>
+        <li>&copy;2018 HELP NOW</li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--up button-->
+<a href="#" id="up-btn"></a> <a href="#" class="chat"><img src="../../assets/images/chat.png" alt="Chat" /></a>
+<!--sign in popup-->
+
+<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog form-cont" role="document">
+    <div class="modal-content">
+      <div class="modal-header signup-h">
+        <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Sign-in</h4>
+      </div>
+      <div class="modal-body form-pad">
+        <div class="form-group mb-4">
+          <input type="text" class="form-control f13" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control f13" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <div class="text-center">
+            <button type="submit" class="signin-btn">Sign in</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="custom-check pest-checkbox f-left mto">Remember me
+            <input type="checkbox">
+            <span class="checkmark3"></span></label>
+          <a href="#" class="f-right forgot-t">Forgot password?</a>
+          <div class="clearfix"></div>
+        </div>
+        <div class="social-head">
+          <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Sign-in with Social</h4>
+        </div>
+        <ul class="signin-social mb27">
+          <li><a href="#"><img src="../../assets/images/g.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/facebook.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/twitter.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/insta.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/snapchat.png" /></a></li>
+        </ul>
+        <div class="mt-4"> <a href="#" class="forgot-t">Don't have an account?</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog form-cont" role="document">
+    <div class="modal-content">
+      <div class="modal-header signup-h">
+        <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Register with Social</h4>
+      </div>
+      <div class="modal-body form-pad">
+        <ul class="signin-social mb16">
+          <li><a href="#"><img src="../../assets/images/g.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/facebook.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/twitter.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/insta.png" /></a></li>
+          <li><a href="#"><img src="../../assets/images/snapchat.png" /></a></li>
+        </ul>
+        <div class="social-head">
+          <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Create an account</h4>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control f13" placeholder="First Name">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control f13" placeholder="Last Name">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control f13" placeholder="Username/Email">
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control f13" placeholder="Mobile Phone">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control f13" placeholder="Zip">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" id="" class="form-control f13" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label class="custom-check pest-checkbox f-left">Customer
+            <input type="checkbox">
+            <span class="checkmark3"></span></label>
+          <label class="custom-check pest-checkbox f-left ml65">Provider
+            <input type="checkbox">
+            <span class="checkmark3"></span></label>
+          <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+          <div class="text-center">
+            <button type="submit" class="signin-btn">Sign Up</button>
+          </div>
+        </div>
+        <div class="mt35"> <a href="#" class="forgot-t">Already Registered?</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
