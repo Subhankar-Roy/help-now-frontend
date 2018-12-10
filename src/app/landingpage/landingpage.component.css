@@ -1,0 +1,7 @@
+.error-msg {
+  color: red;
+  font-size: 13px;
+}
+.error-tb {
+  border-bottom: 1px solid red;
+}

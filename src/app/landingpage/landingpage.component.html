@@ -660,48 +660,77 @@
         <div class="social-head">
           <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Create an account</h4>
         </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" class="form-control f13" placeholder="First Name">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control f13" formControlName="first_name" placeholder="First Name" required [ngClass]="{'error-tb': registerForm.controls['first_name'].invalid && (registerForm.controls['first_name'].dirty || registerForm.controls['first_name'].touched)}">
+                <div *ngIf="registerForm.controls['first_name'].invalid && (registerForm.controls['first_name'].dirty || registerForm.controls['first_name'].touched)" class="error-msg">
+                  <div *ngIf="registerForm.controls['first_name'].errors.required">First Name is required.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control f13" formControlName="last_name" placeholder="Last Name" required [ngClass]="{'error-tb': registerForm.controls['last_name'].invalid && (registerForm.controls['last_name'].dirty || registerForm.controls['last_name'].touched)}">
+                <div *ngIf="registerForm.controls['last_name'].invalid && (registerForm.controls['last_name'].dirty || registerForm.controls['last_name'].touched)" class="error-msg">
+                  <div *ngIf="registerForm.controls['last_name'].errors.required">Last Name is required.</div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
             </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control f13" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control f13" formControlName="email" placeholder="Username/Email" required [ngClass]="{'error-tb': registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)}">
+            <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="error-msg">
+              <div *ngIf="registerForm.controls['email'].errors.required">Email is required.</div>
+              <div *ngIf="registerForm.controls['email'].errors.email">Wrong Email format. e.g. email@domain.com!</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control f13" formControlName="mobile_phone" placeholder="Mobile Phone" required [ngClass]="{'error-tb': registerForm.controls['mobile_phone'].invalid && (registerForm.controls['mobile_phone'].dirty || registerForm.controls['mobile_phone'].touched)}">
+                <div *ngIf="registerForm.controls['mobile_phone'].invalid && (registerForm.controls['mobile_phone'].dirty || registerForm.controls['mobile_phone'].touched)" class="error-msg">
+                  <div *ngIf="registerForm.controls['mobile_phone'].errors.required">Mobile number is required.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="number" class="form-control f13" formControlName="zip" placeholder="Zip" required [ngClass]="{'error-tb': registerForm.controls['zip'].invalid && (registerForm.controls['zip'].dirty || registerForm.controls['zip'].touched)}">
+                <div *ngIf="registerForm.controls['zip'].invalid && (registerForm.controls['zip'].dirty || registerForm.controls['zip'].touched)" class="error-msg">
+                  <div *ngIf="registerForm.controls['zip'].errors.required">Zip code is required.</div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control f13" formControlName="password" placeholder="Password" required [ngClass]="{'error-tb': registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)}">
+            <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)" class="error-msg">
+              <div *ngIf="registerForm.controls['password'].errors.required">Password is required.</div>
+              <div *ngIf="registerForm.controls['password'].errors.minlength">Password should be at least 8 digit long.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control f13" formControlName="confirm_password" placeholder="Confirm Password" required [ngClass]="{'error-tb': registerForm.controls['confirm_password'].invalid && (registerForm.controls['confirm_password'].dirty || registerForm.controls['confirm_password'].touched)}">
+            <div *ngIf="registerForm.controls['confirm_password'].invalid && (registerForm.controls['confirm_password'].dirty || registerForm.controls['confirm_password'].touched)" class="error-msg">
+              <div *ngIf="registerForm.controls['confirm_password'].errors.required">Confirm Password is required.</div>
+              <div *ngIf="registerForm.controls['confirm_password'].errors.minlength">Confirm Password should be at least 8 digit long.</div>
+              <div *ngIf="registerForm.controls['password'].value !== registerForm.controls['confirm_password'].value">Password and confirm password did not match.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="radio" formControlName="is_provider" value="true" required> Provider
+            <input type="radio" formControlName="is_provider" value="false" required> Customer
+            <div *ngIf="registerForm.controls['is_provider'].invalid && (registerForm.controls['is_provider'].dirty || registerForm.controls['is_provider'].touched)" class="error-msg">
+              <div *ngIf="registerForm.controls['is_provider'].errors.required">Please Select one registration type</div>
             </div>
             <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="form-group">
-          <input type="email" class="form-control f13" placeholder="Username/Email">
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" class="form-control f13" placeholder="Mobile Phone">
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" class="signin-btn" [disabled]="!registerForm.valid">Sign Up</button>
             </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control f13" placeholder="Zip">
-            </div>
-            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="form-group">
-          <input type="password" id="" class="form-control f13" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <label class="custom-check pest-checkbox f-left">Customer
-            <input type="checkbox">
-            <span class="checkmark3"></span></label>
-          <label class="custom-check pest-checkbox f-left ml65">Provider
-            <input type="checkbox">
-            <span class="checkmark3"></span></label>
-          <div class="clearfix"></div>
-        </div>
-        <div class="form-group">
-          <div class="text-center">
-            <button type="submit" class="signin-btn">Sign Up</button>
-          </div>
-        </div>
+        </form>
         <div class="mt35"> <a href="#" class="forgot-t">Already Registered?</a> </div>
       </div>
     </div>
