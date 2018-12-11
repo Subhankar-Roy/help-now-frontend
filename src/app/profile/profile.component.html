@@ -1,3 +1,841 @@
-<p>
-  profile works!
-</p>
+<section class="search-bg cavail">
+<app-header></app-header>
+<div class="clearfix"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-rating p-rating">
+          <div class="pest-control-box">
+            <ul class="profile-rating">
+              <li>
+                <p>Points <span>850</span></p>
+              </li>
+              <li>
+                <p>Since <span>May 9, 2018</span></p>
+              </li>
+              <li>
+                <p>Avg Rating <span><img src="../../assets/images/star.png" alt="" /></span></p>
+              </li>
+              <!--<li>
+                <p>Avatar <span><img src="images/avatar.png" alt="" /></span></p>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-activity">
+      <div class="col-md-logo">
+        <div class="profile-con">
+          <div class="logo-pic"><img src="../../assets/images/target.png" alt="" />
+            <div class="upload-btn-wrapper"> <i class="fa fa-pencil" aria-hidden="true"></i>
+              <input type="file" name="myfile" />
+            </div>
+          </div>
+          <!--<h2>Technician Profile</h2>-->
+        </div>
+      </div>
+      <div class="col-md-profile">
+        <div class="profile-con">
+          <div class="profile-pic"><img src="../../assets/images/pic1.png" alt="" />
+            <div class="upload-btn-wrapper"> <i class="fa fa-pencil" aria-hidden="true"></i>
+              <input type="file" name="myfile" />
+            </div>
+          </div>
+          <h2>Owner Profile</h2>
+        </div>
+      </div>
+      <!-- <div class="col-md-rating">
+         <div class="pest-control-box">
+           <ul class="profile-rating">
+             <li>
+               <p>Points <span>850</span></p>
+             </li>
+             <li>
+               <p>Since <span>May 9, 2018</span></p>
+             </li>
+             <li>
+               <p>Avg Rating <span><img src="images/star.png" alt="" /></span></p>
+             </li>
+             <li>
+               <p>Avatar <span><img src="images/avatar.png" alt="" /></span></p>
+             </li>
+           </ul>
+         </div>
+       </div>-->
+
+      <div class="clearfix"></div>
+    </div>
+    <div role="tabpanel" class="profile-tab">
+      <ul class="nav nav-tabs f-none nav-justified nav-tabs-dropdown p-technician tab-menu owner-pro" role="tablist">
+        <li role="presentation"> <a href="#professional" class="active" aria-controls="professional" role="tab" data-toggle="tab">Professional</a> </li>
+        <li role="presentation"> <a href="#account" class="" aria-controls="account" role="tab" data-toggle="tab">Account</a> </li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="professional">
+          <div role="tabpanel" class="profile-tab pt-5">
+            <ul class="nav nav-tabs f-none nav-justified nav-tabs-dropdown p-technician tab-menu owner-pro" role="tablist">
+              <li role="presentation"> <a href="#owner" class="active" aria-controls="owner" role="tab" data-toggle="tab">Owner</a> </li>
+              <li role="presentation"> <a href="#technician" class="" aria-controls="technician" role="tab" data-toggle="tab">Technician</a> </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="owner">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-inner">
+                      <div class="f-name">Name</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="First*">
+                        <input type="text" class="form-control" placeholder="Middle">
+                        <input type="text" class="form-control" placeholder="Last*">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Contact</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="Mobile Phone*">
+                        <input type="text" class="form-control" placeholder="Work Phone*">
+                        <input type="text" class="form-control" placeholder="Email*">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Group</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="Name*">
+                        <input type="text" class="form-control" placeholder="Founded">
+                        <input type="text" class="form-control" placeholder="Title">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Business Address</div>
+                      <div class="form-field drop-d">
+                        <input type="text" class="form-control" placeholder="Street*">
+                        <input type="text" class="form-control" placeholder="Apt/Ste/PO">
+                        <input type="text" class="form-control" placeholder="City*">
+                        <select class="form-control">
+                          <option data-display="State">State</option>
+                          <option value="1">Kolkata</option>
+                          <option value="2">Delhi</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Zip*">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-inner">
+                      <div class="f-name">Demographics</div>
+                      <div class="form-field drop-d">
+                        <select class="form-control">
+                          <option data-display="Language">Language</option>
+                          <option value="1">Hindi</option>
+                          <option value="2">English</option>
+                        </select>
+                        <select class="form-control">
+                          <option data-display="Gender">Gender</option>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Birthdate">
+                        <select class="form-control">
+                          <option data-display="Ethnicity">Ethnicity</option>
+                          <option value="1">OBC</option>
+                          <option value="2">SC</option>
+                        </select>
+                        <select class="form-control">
+                          <option data-display="Relationship">Relationship</option>
+                          <option value="1">Brother</option>
+                          <option value="2">Father</option>
+                        </select>
+                        <select class="form-control">
+                          <option data-display="Education">Education</option>
+                          <option value="1">B.Tech</option>
+                          <option value="2">M.Tech</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Occupation">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-inner">
+                      <div class="f-name">Payment</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="Bank">
+                        <div class="position-relative">
+                          <input type="text" class="form-control" placeholder="Account">
+                          <span class="eye-icon"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></span> </div>
+                        <input type="text" class="form-control" placeholder="Routing">
+                        <input type="text" class="form-control" placeholder="Name on Acct">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Billing</div>
+                      <div class="form-field drop-d">
+                        <input type="text" class="form-control" placeholder="Street*">
+                        <input type="text" class="form-control" placeholder="Building/Suite">
+                        <input type="text" class="form-control" placeholder="City*">
+                        <select class="form-control">
+                          <option data-display="State">State</option>
+                          <option value="1">Kolkata</option>
+                          <option value="2">Delhi</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Zip*">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Paypal</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="Account">
+                      </div>
+                    </div>
+                    <div class="form-inner">
+                      <div class="f-name">Venmo</div>
+                      <div class="form-field">
+                        <input type="text" class="form-control" placeholder="Account">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="technician">
+                <div class="tech-tablecon">
+                  <div class="tech-top1 mt-3">
+                    <p class="f-left f-w-5">Owner Operator</p>
+                    <ul class="activity-tab-btns f-right">
+                      <li>
+                        <div class="callnow p-ac-btn"> <a href="#"><i class="fa fa-check" aria-hidden="true"></i> Activate</a> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn"><a href="#"><i class="fa fa-times" aria-hidden="true"></i> Deactivate</a> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn position-relative"> <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Archive</a> <span class="free">PAID</span> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn position-relative"> <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> See Archive</a> <span class="free">PAID</span> </div>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="availability-table property-table-scroll tech-top-table">
+                    <table id="example1" class="display" cellspacing="0" width="100%">
+                      <thead>
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Headshot</th>
+                        <th>Mobile Phone</th>
+                        <th>Email</th>
+                        <th>Language</th>
+                        <th>Gender</th>
+                        <th>Birthdate</th>
+                        <th>Ethnicity</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Jim</td>
+                        <td>Barnes</td>
+                        <td align="center"><img src="../../assets/images/pic1.png" width="16" /></td>
+                        <td>555-123-6789</td>
+                        <td>jbarnes@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>09-14-1990</td>
+                        <td>Caucasian</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="plus-cont"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                  </div>
+                </div>
+                <div class="tech-tablecon">
+                  <div class="tech-top1 mt-5">
+                    <p class="f-left f-w-5">Technicians</p>
+                    <ul class="activity-tab-btns f-right">
+                      <li>
+                        <div class="callnow p-ac-btn"><a href="#"><i class="fa fa-check" aria-hidden="true"></i> Activate</a> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn"><a href="#"><i class="fa fa-times" aria-hidden="true"></i> Deactivate</a> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn position-relative"> <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Archive</a> <span class="free">PAID</span> </div>
+                      </li>
+                      <li>
+                        <div class="callnow p-ac-btn position-relative"> <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> See Archive</a> <span class="free">PAID</span> </div>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="availability-table property-table-scroll activity-table mt-0">
+                    <table id="example2" class="display" cellspacing="0" width="100%">
+                      <thead>
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Headshot</th>
+                        <th>Status</th>
+                        <th>Mobile Phone</th>
+                        <th>Email</th>
+                        <th>Language</th>
+                        <th>Gender</th>
+                        <th>Birthdate</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Aaron</td>
+                        <td>Seegmiller</td>
+                        <td align="center"><img src="../../assets/images/pic1.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6790</td>
+                        <td>jbarnes@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>03-15-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          John</td>
+                        <td>Williams</td>
+                        <td align="center"><img src="../../assets/images/pic2.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6791</td>
+                        <td>jwilliams@tpc.com</td>
+                        <td>English,Spanish </td>
+                        <td>Male</td>
+                        <td>09-10-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Emily</td>
+                        <td>Thompson</td>
+                        <td align="center"><img src="../../assets/images/pic3.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6792</td>
+                        <td>ethompson@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>06-15-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Samantha</td>
+                        <td>Knoll</td>
+                        <td align="center"><img src="../../assets/images/pic1.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6793</td>
+                        <td>sknoll@tpc.com</td>
+                        <td>English,German</td>
+                        <td>Female</td>
+                        <td>05-15-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Xavier</td>
+                        <td>Chavez</td>
+                        <td align="center"><img src="../../assets/images/pic2.png" width="16" /></td>
+                        <td>Deactivated</td>
+                        <td>555-123-6794</td>
+                        <td>xchavez@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>10-05-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Nick</td>
+                        <td>McKenna</td>
+                        <td align="center"><img src="../../assets/images/pic3.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6795</td>
+                        <td>nmckenna@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>11-22-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Miguel</td>
+                        <td>Paleo</td>
+                        <td align="center"><img src="../../assets/images/pic1.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6796</td>
+                        <td>mpaleo@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>08-07-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Nela</td>
+                        <td>Takabori</td>
+                        <td align="center"><img src="../../assets/images/pic2.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6797</td>
+                        <td>ntakabori@tpc.com</td>
+                        <td>English</td>
+                        <td>Male</td>
+                        <td>03-15-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Aaron</td>
+                        <td>Seegmiller</td>
+                        <td align="center"><img src="../../assets/images/pic3.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6790</td>
+                        <td>jbarnes@tpc.com</td>
+                        <td>English,Japanese</td>
+                        <td>Female</td>
+                        <td>11-22-1990</td>
+                      </tr>
+                      <tr>
+                        <td><label class="custom-check checkbox2">
+                          <input type="checkbox">
+                          <span class="checkmark3 row-check"></span></label>
+                          Xing</td>
+                        <td>Barnes</td>
+                        <td align="center"><img src="../../assets/images/pic1.png" width="16" /></td>
+                        <td>Activated</td>
+                        <td>555-123-6798</td>
+                        <td>xbarnes@tpc.com</td>
+                        <td>English,Chinese</td>
+                        <td>Male</td>
+                        <td>09-23-1990</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="plus-cont"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="account">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-inner">
+                <div class="f-name">Customer</div>
+                <div class="form-field drop-d">
+                  <select class="form-control">
+                    <option data-display="Type">Type</option>
+                    <option value="1">Residential</option>
+                    <option value="2">Commercial</option>
+                  </select>
+                  <input type="text" class="form-control" placeholder="Subscription">
+                </div>
+              </div>
+              <div class="form-inner">
+                <div class="f-name">User</div>
+                <div class="form-field">
+                  <input type="text" class="form-control" placeholder="Username">
+                  <div class="position-relative">
+                    <input type="password" class="form-control" placeholder="Password">
+                    <span class="eye-icon"><i class="fa fa-eye" aria-hidden="true"></i></span> </div>
+                  <input type="text" class="form-control" placeholder="ID">
+                </div>
+              </div>
+              <div class="form-inner">
+                <div class="f-name">Service</div>
+                <div class="form-field">
+                  <div class="radio-cont">
+                    <div class="display-inline">
+                      <p class="area-t">Plan</p>
+                      <label class="custom-check checkbox2">One-time
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <label class="custom-check checkbox2">Recurring
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+
+                      <!--<label class="container1 mr5">
+                      <input type="radio" checked="checked" name="radio">
+                      <span class="checkmark"></span> </label>
+                    <label class="container1">Recurring
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span> </label>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-inner">
+                <div class="f-name">Partner</div>
+                <div class="form-field drop-d">
+                  <select class="form-control">
+                    <option data-display="Arrangement">Arrangement</option>
+                    <option value="1">Profit Share</option>
+                    <option value="2">Flat Fee</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-inner">
+                <div class="f-name">Settings</div>
+                <div class="form-field drop-d">
+                  <select class="form-control">
+                    <option data-display="Language">Language</option>
+                    <option value="1">Hindi</option>
+                    <option value="2">English</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="f-name noti-t">Notifications</div>
+                <div class="form-field">
+                  <div class="checkbox-con">
+                    <label class="custom-check checkbox2">Text
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Email
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Social
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Phone
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="f-name noti-t">Special Offers</div>
+                <div class="form-field drop-d">
+                  <div class="checkbox-con">
+                    <label class="custom-check checkbox2">Text
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Email
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Social
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check checkbox2">Phone
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                  </div>
+                  <select class="form-control">
+                    <option data-display="Privacy">Privacy</option>
+                    <option value="1">On</option>
+                    <option value="2">Off</option>
+                  </select>
+                  <select class="form-control">
+                    <option data-display="Posts">Posts</option>
+                    <option value="1">On</option>
+                    <option value="2">Off</option>
+                  </select>
+                  <select class="form-control">
+                    <option data-display="Status">Status</option>
+                    <option value="1">Active </option>
+                    <option value="2">Inactive</option>
+                    <option value="3">Closed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-inner">
+                <div class="f-name">EIN</div>
+                <div class="form-field">
+                  <input type="text" class="form-control" placeholder="Number">
+                </div>
+              </div>
+              <div class="form-inner">
+                <div class="f-name">W9</div>
+                <div class="form-field">
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="Upload">
+                    <span class="eye-icon"><a href="#"><i class="fa fa-upload" aria-hidden="true"></i></a></span> </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pest-type-chk">
+                <div class="pest-type-controlar">
+                  <div class="f-name p-mr54">Pest Type</div>
+                  <div class="pest-type-checkbox">
+                    <label class="custom-check pest-checkbox">Insects
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check pest-checkbox">Bedbugs
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check pest-checkbox">Termites
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check pest-checkbox">Wasps
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <div class="clearfix"></div>
+                    <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="images/trash.png" ></a> </div>
+                  </div>
+                </div>
+                <div class="pest-type-controlar">
+                  <div class="f-name p-mr54">Keywords</div>
+                  <div class="pest-type-checkbox">
+                    <ul class="keywords-con">
+                      <li>Bedbugs</li>
+                      <li>Termites</li>
+                      <li>Wasps</li>
+                      <li class="add-bg">
+                        <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="images/trash.png" ></a> </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pest-type-controlar">
+                  <div class="f-name">Pest License</div>
+                  <div class="pest-type-checkbox">
+                    <div class="position-relative">
+                      <input type="text" class="form-control" placeholder="Expiration 09/19">
+                      <a href="#" class="eye-icon"><img src="../../assets/images/trash.png" ></a> </div>
+                  </div>
+                </div>
+                <div class="pest-type-controlar">
+                  <div class="f-name">Business License</div>
+                  <div class="pest-type-checkbox">
+                    <div class="position-relative">
+                      <input type="text" class="form-control" placeholder="NJ,CO,UT">
+                      <span class="eye-icon"> <a href="#" class="mr-2"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </span> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pest-type-chk add-content-box">
+                <div class="pest-type-controlar gray-bg">
+                  <!--<div class="f-name p-mr54">Property</div>-->
+                  <div class="pest-type-checkbox br-none add-content-con">
+                    <label class="custom-check pest-checkbox">Mites
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <div class="clearfix"></div>
+                    <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="images/trash.png" ></a> </div>
+                    <div class="pt70-mb70">
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="images/trash.png" ></a> </div>
+                    </div>
+                    <div class="position-relative">
+                      <input type="text" class="form-control" placeholder="Expiration 09/19">
+                      <a href="#" class="eye-icon"><img src="../../assets/images/trash.png"></a> </div>
+                    <div class="position-relative mt-4">
+                      <input type="text" class="form-control" placeholder="TX,AZ">
+                      <span class="eye-icon"> <a href="#" class="mr-2"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </span> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pest-type-chk add-content-box">
+                <div class="br-right-left">
+                  <div class="pest-type-controlar">
+                    <!--<div class="f-name p-mr54">Property</div>-->
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <label class="custom-check pest-checkbox">Rodents
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <label class="custom-check pest-checkbox">Rats
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <label class="custom-check pest-checkbox">Gropher
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <!--<label class="custom-check pest-checkbox">Wasps
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>-->
+                      <div class="clearfix"></div>
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png"></a> <a href="#"><img src="../../assets/images/trash.png"></a></div
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left mt-5">
+                  <div class="pest-type-controlar">
+                    <!--<div class="f-name p-mr54">Property</div>-->
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <ul class="keywords-con">
+                        <li>Rats</li>
+                        <li>Gropher</li>
+                      </ul>
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left mt-5">
+                  <div class="pest-type-controlar">
+                    <!--<div class="f-name p-mr54">Property</div>-->
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left mt35">
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="NJ,CO,UT">
+                    <span class="eye-icon"> <a href="#" class="mr-2"><img src="../../assets/images/add.png"></a> <a href="#"><img src="../../assets/images/trash.png"></a> </span> </div>
+                </div>
+              </div>
+              <div class="pest-type-chk add-content-box">
+                <div class="pest-type-controlar gray-bg">
+                  <!--<div class="f-name p-mr54">Property</div>-->
+                  <div class="pest-type-checkbox br-none add-content-con">
+                    <label class="custom-check pest-checkbox">Animals
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <label class="custom-check pest-checkbox">Racoon
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label>
+                    <div class="clearfix"></div>
+                    <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png"></a> <a href="#"><img src="../../assets/images/trash.png"></a></div>
+                    <div class="pt75-mb72">
+                      <ul class="keywords-con">
+                        <li>Racoon</li>
+                        <li class="add-bg">
+                          <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                    <div class="position-relative mt-5">
+                      <input type="text" class="form-control" placeholder="TX,AZ">
+                      <span class="eye-icon"> <a href="#" class="mr-2"><img src="../../assets/images/add.png"></a> <a href="#"><img src="../../assets/images/trash.png"></a> </span> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pest-type-chk add-content-box">
+                <div class="br-right-left br-0">
+                  <div class="pest-type-controlar">
+                    <!--<div class="f-name p-mr54">Property</div>-->
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <label class="custom-check pest-checkbox">Birds
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <div class="clearfix"></div>
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png"></a> <a href="#"><img src="../../assets/images/trash.png"></a></div
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left br-0">
+                  <div class="pest-type-controlar">
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <div class="pt88-mb60">
+                        <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left br-0">
+                  <div class="pest-type-controlar">
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="br-right-left br-0 mt-5">
+                  <div class="pest-type-controlar">
+                    <div class="pest-type-checkbox br-none add-content-con">
+                      <div class="add-icons"> <a href="#"><img src="../../assets/images/add.png" ></a> <a href="#"><img src="../../assets/images/trash.png" ></a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="availability-table mt0 methods">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>Methods</td>
+                    <td><label class="custom-check pest-checkbox pt0">Mechanical
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><label class="custom-check pest-checkbox pt0">Physical
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><label class="custom-check pest-checkbox pt0">Cultural
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><label class="custom-check pest-checkbox pt0">Chemical
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><label class="custom-check pest-checkbox pt0">Biological
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><label class="custom-check pest-checkbox pt0">Quarantine
+                      <input type="checkbox">
+                      <span class="checkmark3"></span> </label></td>
+                    <td><div class="display-inline pt-2">
+                      <label class="custom-check plus-i">Other
+                        <input type="checkbox">
+                        <span class="checkmark3"></span> </label>
+                      <a href="#" class="pl-2"><img src="../../assets/images/add.png"></a></div></td>
+                  </tr>
+                  <tr class="drop-d">
+                    <td>Eco-friendly</td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                    <td><select class="form-control">
+                      <option data-display="Yes">Yes</option>
+                      <option value="2">No</option>
+                    </select></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
+</section>

@@ -532,7 +532,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center"><a href="index.html"><img src="../../assets/images/logo.png" alt="" /></a></div>
+    <div class="text-center"><a routerLink="/"><img src="../../assets/images/logo.png" alt="" /></a></div>
     <div class="footer-menu">
       <div class="row">
         <div class="col-md-4">
@@ -609,24 +609,34 @@
         <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Sign-in</h4>
       </div>
       <div class="modal-body form-pad">
-        <div class="form-group mb-4">
-          <input type="text" class="form-control f13" placeholder="Username">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control f13" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <div class="text-center">
-            <button type="submit" class="signin-btn">Sign in</button>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-group mb-4">
+            <input type="email" class="form-control f13" formControlName="email" placeholder="Username" required [ngClass]="{'error-tb': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)}">
+            <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="error-msg">
+              <div *ngIf="loginForm.controls['email'].errors.required">Email is required.</div>
+              <div *ngIf="loginForm.controls['email'].errors.email">Wrong Email format. e.g. email@domain.com!</div>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label class="custom-check pest-checkbox f-left mto">Remember me
-            <input type="checkbox">
-            <span class="checkmark3"></span></label>
-          <a href="#" class="f-right forgot-t">Forgot password?</a>
-          <div class="clearfix"></div>
-        </div>
+          <div class="form-group">
+            <input type="password" class="form-control f13" formControlName="password" placeholder="Password" required [ngClass]="{'error-tb': loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)}">
+            <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="error-msg">
+              <div *ngIf="loginForm.controls['password'].errors.required">Password is required.</div>
+              <div *ngIf="loginForm.controls['password'].errors.minlength">Password should be at least 8 digit long.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" class="signin-btn" [disabled]="!loginForm.valid">Sign in</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="custom-check pest-checkbox f-left mto">Remember me
+              <input type="checkbox">
+              <span class="checkmark3"></span></label>
+            <a href="#" class="f-right forgot-t">Forgot password?</a>
+            <div class="clearfix"></div>
+          </div>
+        </form>
         <div class="social-head">
           <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Sign-in with Social</h4>
         </div>
@@ -718,8 +728,8 @@
             </div>
           </div>
           <div class="form-group">
-            <input type="radio" formControlName="is_provider" value="true" required> Provider
-            <input type="radio" formControlName="is_provider" value="false" required> Customer
+            <input type="radio" formControlName="is_provider" value="true" required> <span class="sm-f">Provider</span>
+            <input type="radio" formControlName="is_provider" value="false" required> <span class="sm-f">Customer</span>
             <div *ngIf="registerForm.controls['is_provider'].invalid && (registerForm.controls['is_provider'].dirty || registerForm.controls['is_provider'].touched)" class="error-msg">
               <div *ngIf="registerForm.controls['is_provider'].errors.required">Please Select one registration type</div>
             </div>

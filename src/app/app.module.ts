@@ -10,6 +10,7 @@ import { ErrorhandleComponent } from './errorhandle/errorhandle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingpageService } from './services/landingpage.service';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard } from './authentication-guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ProfileComponent } from './profile/profile.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ReactiveFormsModule, LandingpageService],
+  providers: [ReactiveFormsModule, LandingpageService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

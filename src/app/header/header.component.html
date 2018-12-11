@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <div class="top-menu">
-      <div class="col-logo"> <a href="#"><img src="../../assets/images/logo.png" alt="Help now" title="Help now"></a> </div>
+      <div class="col-logo"> <a routerLink="/"><img src="../../assets/images/logo.png" alt="Help now" title="Help now"></a> </div>
       <div class="callnow mob-view mt-4"> <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call 1-800-HELPNOW</a> </div>
       <div class="col-menu">
         <div class="menu-cont">
@@ -33,9 +33,14 @@
                 </li>
                 <li class="menu__item to-left"> <a href="#" class="menu__link">Feedback</a>
                 </li>
-                <li class="menu__item signup-cont" style="margin-right:0;"> <i class="fa fa-user-o" aria-hidden="true"></i> &nbsp;<a href="#" class="menu__link pright-0" data-toggle="modal" data-target="#signin">Signin</a>
+                <li *ngIf="!isLoggedIn" class="menu__item signup-cont" style="margin-right:0;"> <i class="fa fa-user-o" aria-hidden="true"></i> &nbsp;<a href="#" class="menu__link pright-0" data-toggle="modal" data-target="#signin">Signin</a>
                   &nbsp;<p>or</p>&nbsp;
-                  <a href="#" class="menu__link pright-0" data-toggle="modal" data-target="#register"> Register</a> </li>
+                  <a href="#" class="menu__link pright-0" data-toggle="modal" data-target="#register"> Register</a>
+                </li>
+                <li *ngIf="isLoggedIn" class="menu__item signup-cont" style="margin-right:0;"> <i class="fa fa-user-o" aria-hidden="true"></i> &nbsp;<a routerLink="/profile" class="menu__link pright-0">Profile</a>
+                  &nbsp;<p>or</p>&nbsp;
+                  <a href="#" class="menu__link pright-0" (click)="logout()"> Logout</a>
+                </li>
                 <div class="clearfix"></div>
               </ul>
             </nav>
