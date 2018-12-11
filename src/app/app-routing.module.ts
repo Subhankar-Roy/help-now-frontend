@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import {LandingpageComponent} from './landingpage/landingpage.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AuthGuard} from './authentication-guard/auth.guard';
+import {CustomerProfileComponent} from './customer-profile/customer-profile.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: LandingpageComponent },
-  { path: 'profile', pathMatch: 'full' , component: ProfileComponent, canActivate: [AuthGuard] }
+  { path: 'provider-profile', pathMatch: 'full' , component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'customer-profile', pathMatch: 'full', component: CustomerProfileComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

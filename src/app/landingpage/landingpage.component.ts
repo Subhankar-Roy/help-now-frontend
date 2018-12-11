@@ -55,14 +55,15 @@ export class LandingpageComponent implements OnInit {
    * This function signs up one user
    */
   onSubmit() {
-    if (this.registerForm.valid && this.registerForm.value.is_provider || this.registerForm.value.is_provider === 'true') {
+    if (this.registerForm.valid) {
       this.signUpFormResp = this.lps.signUp(this.registerForm.value);
       this.signUpFormResp.subscribe(data => {
         if (data.status) {
             // to hide the modal
             document.getElementById('register').click();
             localStorage.setItem('_token', data.response.metadata.original.response.token);
-            this.router.navigate(['profile']);
+            localStorage.setItem('_cu', JSON.stringify(data.response.metadata.original.response.authenticated_user));
+            this.router.navigate([this.registerForm.value.is_provider ? 'provider-profile' : 'customer-profile']);
         } else {
           this.errFlg = true;
           this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + ' . Please try again later!';
@@ -90,7 +91,8 @@ export class LandingpageComponent implements OnInit {
         if (data.status) {
           document.getElementById('signin').click();
           localStorage.setItem('_token', data.response.token);
-          this.router.navigate(['profile']);
+          localStorage.setItem('_cu', JSON.stringify(data.response.authenticated_user));
+          this.router.navigate([data.response.authenticated_user.user_type === '5' ? 'provider-profile' : 'customer-profile']);
         } else {
           this.errFlg = true;
           this.errString = 'Failed to sign you In ' + this.loginForm.value.email + ' . Please try again later!';

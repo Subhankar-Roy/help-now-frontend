@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingpageService } from './services/landingpage.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './authentication-guard/auth.guard';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AuthGuard } from './authentication-guard/auth.guard';
     LandingpageComponent,
     FooterComponent,
     ErrorhandleComponent,
-    ProfileComponent
+    ProfileComponent,
+    ForgotpasswordComponent,
+    CustomerProfileComponent
   ],
   imports: [
     BrowserModule,

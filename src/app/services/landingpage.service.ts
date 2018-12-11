@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import {User} from '../models/User';
-import {Login} from '../models/Login';
+import { User } from '../models/User';
+import { Login } from '../models/Login';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,11 @@ export class LandingpageService {
    * @param userData
    */
   signUp(userData: User) {
-    return this.http.post(environment.API_URL + '/sign-up', userData);
+    if (userData.is_provider) {
+      return this.http.post(environment.API_URL + 'provider/sign-up', userData);
+    } else {
+      return this.http.post(environment.API_URL + 'customer/create', userData);
+    }
   }
 
   /**
@@ -24,7 +28,7 @@ export class LandingpageService {
    * @param userData
    */
   signIn(userData: Login) {
-    return this.http.post(environment.API_URL + '/login', userData);
+    return this.http.post(environment.API_URL + 'login', userData);
   }
   /**
    * check a user is logged in or not

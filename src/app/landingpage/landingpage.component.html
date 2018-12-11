@@ -728,8 +728,8 @@
             </div>
           </div>
           <div class="form-group">
-            <input type="radio" formControlName="is_provider" value="true" required> <span class="sm-f">Provider</span>
-            <input type="radio" formControlName="is_provider" value="false" required> <span class="sm-f">Customer</span>
+            <input type="radio" formControlName="is_provider" [value]="true" required> <span class="sm-f">Provider</span>
+            <input type="radio" formControlName="is_provider" [value]="false" required> <span class="sm-f">Customer</span>
             <div *ngIf="registerForm.controls['is_provider'].invalid && (registerForm.controls['is_provider'].dirty || registerForm.controls['is_provider'].touched)" class="error-msg">
               <div *ngIf="registerForm.controls['is_provider'].errors.required">Please Select one registration type</div>
             </div>
