@@ -7,6 +7,9 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { FooterComponent } from './footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ErrorhandleComponent } from './errorhandle/errorhandle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LandingpageService } from './services/landingpage.service';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -14,15 +17,17 @@ import { ErrorhandleComponent } from './errorhandle/errorhandle.component';
     HeaderComponent,
     LandingpageComponent,
     FooterComponent,
-    ErrorhandleComponent
+    ErrorhandleComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [ReactiveFormsModule],
+  providers: [ReactiveFormsModule, LandingpageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
