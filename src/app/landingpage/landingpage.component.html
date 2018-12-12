@@ -674,7 +674,7 @@
         </div>
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <app-error-handler *ngIf="errFlg" [errString]="errString" [errArray]="errArray"></app-error-handler>
-          <app-success-handler *ngIf="successFlg" [successString]="successString"></app-success-handler>
+          <!--<app-success-handler *ngIf="successFlg" [successString]="successString"></app-success-handler>-->
           <div class="form-group">
             <div class="row">
               <div class="col-md-6">
@@ -702,7 +702,7 @@
           <div class="form-group">
             <div class="row">
               <div class="col-md-6">
-                <input type="text" class="form-control f13" formControlName="mobile_phone" placeholder="Mobile Phone" required [ngClass]="{'error-tb': registerForm.controls['mobile_phone'].invalid && (registerForm.controls['mobile_phone'].dirty || registerForm.controls['mobile_phone'].touched)}">
+                <input type="text" class="form-control f13" formControlName="mobile_phone" placeholder="Mobile Phone" required [ngClass]="{'error-tb': registerForm.controls['mobile_phone'].invalid && (registerForm.controls['mobile_phone'].dirty || registerForm.controls['mobile_phone'].touched)}" mask="(000) 000-0000">
                 <div *ngIf="registerForm.controls['mobile_phone'].invalid && (registerForm.controls['mobile_phone'].dirty || registerForm.controls['mobile_phone'].touched)" class="error-msg">
                   <div *ngIf="registerForm.controls['mobile_phone'].errors.required">Mobile number is required.</div>
                 </div>

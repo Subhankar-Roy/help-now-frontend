@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ErrorHandlerComponent implements OnInit {
   @Input() errString?: string;
-  @Input() errArray?: any;
+  @Input() errArray?: any = [];
   constructor() { }
 
   ngOnInit() {

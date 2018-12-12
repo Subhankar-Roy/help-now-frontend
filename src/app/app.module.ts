@@ -17,6 +17,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { SuccessHandlerComponent } from './success-handler/success-handler.component';
 import { ErrorBagServiceService } from './services/error-bag-service.service';
+import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ErrorBagServiceService } from './services/error-bag-service.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [ReactiveFormsModule, LandingpageService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
