@@ -635,7 +635,7 @@
             <label class="custom-check pest-checkbox f-left mto">Remember me
               <input type="checkbox">
               <span class="checkmark3"></span></label>
-            <a href="#" class="f-right forgot-t">Forgot password?</a>
+            <a href="#" data-toggle="modal" data-target="#reset" class="f-right forgot-t">Forgot password?</a>
             <div class="clearfix"></div>
           </div>
         </form>
@@ -751,6 +751,36 @@
           </div>
         </form>
         <div class="mt35"> <a href="#" class="forgot-t">Already Registered?</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="reset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog form-cont" role="document">
+    <div class="modal-content">
+      <div class="modal-header signup-h">
+        <h4 class="signin-t"><i class="fa fa-lock light-grey big" aria-hidden="true"></i>&nbsp; &nbsp; Forgot or lost your password ? </h4>
+      </div>
+
+      <div class="modal-body form-pad">
+        <p class="small mod-txt">To reset your password, please enter your email address in the space below and press the button. A link will be sent to help you create a new password.</p>
+        <form [formGroup]="forgotPasswordForm" (ngSubmit)="forgotPasswordRequest()">
+          <app-error-handler *ngIf="errFlg" [errString]="errString"></app-error-handler>
+          <app-success-handler *ngIf="successFlg" [successString]="successString"></app-success-handler>
+          <div class="form-group mb-4">
+            <input type="email" class="form-control f13" formControlName="email" placeholder="Email Address" required [ngClass]="{'error-tb': forgotPasswordForm.controls['email'].invalid && (forgotPasswordForm.controls['email'].dirty || forgotPasswordForm.controls['email'].touched)}">
+            <div *ngIf="forgotPasswordForm.controls['email'].invalid && (forgotPasswordForm.controls['email'].dirty || forgotPasswordForm.controls['email'].touched)" class="error-msg">
+              <div *ngIf="forgotPasswordForm.controls['email'].errors.required">Email is required.</div>
+              <div *ngIf="forgotPasswordForm.controls['email'].errors.email">Wrong Email format. e.g. email@domain.com!</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" class="signin-btn" [disabled]="!forgotPasswordForm.valid">Reset Password</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

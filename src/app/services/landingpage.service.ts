@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { User } from '../models/User';
 import { Login } from '../models/Login';
+import {ForgotPassword} from '../models/ForgotPassword';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,13 @@ export class LandingpageService {
     } else {
       return false;
     }
+  }
+
+  /**
+   * this function sends a request to backend for sending email forgot password
+   * @param userData
+   */
+  forgotPassword(userData: ForgotPassword) {
+    return this.http.post(environment.API_URL + 'user/request/updatepassword', userData);
   }
 }

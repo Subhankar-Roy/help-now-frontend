@@ -11,7 +11,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingpageService } from './services/landingpage.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './authentication-guard/auth.guard';
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
@@ -29,7 +28,6 @@ import { CustomerGuard } from './authentication-guard/customer.guard';
     FooterComponent,
     ErrorhandleComponent,
     ProfileComponent,
-    ForgotpasswordComponent,
     CustomerProfileComponent,
     ErrorHandlerComponent,
     SuccessHandlerComponent
