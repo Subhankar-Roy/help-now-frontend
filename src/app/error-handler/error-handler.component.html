@@ -1,0 +1,16 @@
+<div *ngIf="errArray">
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <ul>
+      <li *ngFor="let err of errArray; let i = index">
+        <strong>Whoops!</strong> {{ err.value }}
+      </li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="errString">
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Whoops!</strong> {{ errString }}
+  </div>
+</div>

@@ -14,6 +14,9 @@ import { AuthGuard } from './authentication-guard/auth.guard';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { ErrorHandlerComponent } from './error-handler/error-handler.component';
+import { SuccessHandlerComponent } from './success-handler/success-handler.component';
+import { ErrorBagServiceService } from './services/error-bag-service.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     ErrorhandleComponent,
     ProfileComponent,
     ForgotpasswordComponent,
-    CustomerProfileComponent
+    CustomerProfileComponent,
+    ErrorHandlerComponent,
+    SuccessHandlerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }],
+  }, ErrorBagServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -610,6 +610,8 @@
       </div>
       <div class="modal-body form-pad">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <app-error-handler *ngIf="errFlg" [errString]="errString"></app-error-handler>
+          <app-success-handler *ngIf="successFlg" [successString]="successString"></app-success-handler>
           <div class="form-group mb-4">
             <input type="email" class="form-control f13" formControlName="email" placeholder="Email" required [ngClass]="{'error-tb': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)}">
             <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="error-msg">
@@ -671,6 +673,8 @@
           <h4 class="signin-t"><i class="fa fa-user-o" aria-hidden="true"></i> Create an account</h4>
         </div>
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <app-error-handler *ngIf="errFlg" [errString]="errString" [errArray]="errArray"></app-error-handler>
+          <app-success-handler *ngIf="successFlg" [successString]="successString"></app-success-handler>
           <div class="form-group">
             <div class="row">
               <div class="col-md-6">

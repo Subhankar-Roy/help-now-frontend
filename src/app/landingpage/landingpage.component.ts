@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LandingpageService } from '../services/landingpage.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { ErrorBagServiceService } from '../services/error-bag-service.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -15,14 +16,18 @@ export class LandingpageComponent implements OnInit {
   loginForm: FormGroup;
   errFlg: boolean;
   errString: string;
+  errArray: any;
+  successFlg: boolean;
+  successString: string;
   signUpFormResp: Observable<any>;
   signInFormResp: Observable<any>;
-  constructor(private fb: FormBuilder, private lps: LandingpageService, private router: Router) { }
+  constructor(private fb: FormBuilder, private lps: LandingpageService, private router: Router, private ebs: ErrorBagServiceService) { }
   ngOnInit() {
     this.createRegistrationForm();
     this.createLoginForm();
     this.errFlg = false;
     this.errString = null;
+    this.errArray = [];
   }
 
   /**
@@ -56,31 +61,35 @@ export class LandingpageComponent implements OnInit {
    */
   onSubmit() {
     if (this.registerForm.valid) {
-      this.signUpFormResp = this.lps.signUp(this.registerForm.value);
-      this.signUpFormResp.subscribe(data => {
-        if (data.status) {
+      if (this.registerForm.value.password === this.registerForm.value.confirm_password) {
+        this.signUpFormResp = this.lps.signUp(this.registerForm.value);
+        this.signUpFormResp.subscribe(data => {
+          if (data.status) {
             // to hide the modal
             document.getElementById('register').click();
             localStorage.setItem('_token', data.response.metadata.original.response.token);
             localStorage.setItem('_cu', JSON.stringify(data.response.metadata.original.response.authenticated_user));
             this.router.navigate([this.registerForm.value.is_provider ? 'provider-profile' : 'customer-profile']);
-        } else {
+          } else {
+            this.errFlg = true;
+            this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + ' . Please try again later!';
+            console.error(this.errString);
+          }
+        }, error => {
           this.errFlg = true;
-          this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + ' . Please try again later!';
-          console.error(this.errString);
-        }
-      }, error => {
+          this.errArray = this.ebs.ObjectToKey(error.error.response, Object.keys(error.error.response)[0]);
+        });
+      } else {
         this.errFlg = true;
-        this.errString = error.error.response;
+        this.errString = 'Password and confirm password did not match!';
         console.error(this.errString);
-      });
+      }
     } else {
       this.errFlg = true;
       this.errString = 'Please fill up the form correctly';
       console.error(this.errString);
     }
   }
-
   /**
    * This functions log user in
    */
