@@ -17,15 +17,13 @@
                 <p>Avg Rating <span><img src="../../assets/images/star.png" alt="" /></span></p>
               </li>
               <!--<li>
-                <p>Avatar <span><img src="images/avatar.png" alt="" /></span></p>
-              </li>-->
+                  <p>Avatar <span><img src="images/avatar.png" alt="" /></span></p>
+                </li>-->
             </ul>
           </div>
         </div>
       </div>
     </div>
-
-
     <div class="row">
       <div class="col-md-5">
         <div class="profile-con">
@@ -85,30 +83,30 @@
               <div class="form-inner">
                 <div class="f-name">Name</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="First" value="{{customer.first_name }}">
-                  <input type="text" class="form-control" placeholder="Middle" value="{{customer.middle_name }}">
-                  <input type="text" class="form-control" placeholder="Last" value="{{customer.last_name}}">
+                  <input type="text" class="form-control" placeholder="First" value="{{customerpersonalinfo.fname}}">
+                  <input type="text" class="form-control" placeholder="Middle" value="{{(customerpersonalinfo.fname && !customerpersonalinfo.mname) ?' ':customerpersonalinfo.mname }}">
+                  <input type="text" class="form-control" placeholder="Last" value="{{ customerpersonalinfo.lname }}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Contact</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Mobile Phone*">
-                  <input type="text" class="form-control" placeholder="Email*">
+                  <input type="text" class="form-control" placeholder="Mobile Phone*" value="{{customerpersonalinfo.phone}}">
+                  <input type="text" class="form-control" placeholder="Email*" value="{{customerpersonalinfo.email}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Address</div>
                 <div class="form-field drop-d">
-                  <input type="text" class="form-control" placeholder="Street*">
-                  <input type="text" class="form-control" placeholder="Apt/Ste/PO">
-                  <input type="text" class="form-control" placeholder="City*">
+                  <input type="text" class="form-control" placeholder="Street*" value="{{customerpersonalinfo.street}}">
+                  <input type="text" class="form-control" placeholder="Apt/Ste/PO" value="{{customerpersonalinfo.po}}">
+                  <input type="text" class="form-control" placeholder="City*" value="{{customerpersonalinfo.city}}">
                   <select class="form-control">
                     <option data-display="State">State</option>
                     <option value="1">Kolkata</option>
                     <option value="2">Delhi</option>
                   </select>
-                  <input type="text" class="form-control" placeholder="Zip*">
+                  <input type="text" class="form-control" placeholder="Zip*" value="{{customerpersonalinfo.zip}}">
                 </div>
               </div>
             </div>
@@ -146,47 +144,47 @@
                     <option value="1">Masters</option>
                     <option value="2">M.Tech</option>
                   </select>
-                  <input type="text" class="form-control" placeholder="Occupation">
+                  <input type="text" class="form-control" placeholder="Occupation" value="{{customerdemographicsinfo.occupation}}">
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-inner">
-                <div class="f-name">Payment</div>
+                <div class="f-name">Payment </div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Debit/Credit">
+                  <input type="text" class="form-control" placeholder="Debit/Credit" value="{{ customerpaymentinfo.card_type }}">
                   <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Account">
+                    <input type="text" class="form-control" placeholder="Account" value="{{customerpaymentinfo.account_number}}">
                     <span class="eye-icon"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></span> </div>
-                  <input type="text" class="form-control" placeholder="Expiration">
-                  <input type="text" class="form-control" placeholder="Name on Card">
-                  <input type="text" class="form-control" placeholder="Security Code">
+                  <input type="text" class="form-control" placeholder="Expiration" value="{{customerpaymentinfo.expiration}}">
+                  <input type="text" class="form-control" placeholder="Name on Card" value="{{customerpaymentinfo.name_on_card}}">
+                  <input type="text" class="form-control" placeholder="Security Code" value="{{customerpaymentinfo.security_code}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Billing</div>
                 <div class="form-field drop-d">
-                  <input type="text" class="form-control" placeholder="Street*">
-                  <input type="text" class="form-control" placeholder="Apt/Ste/PO">
-                  <input type="text" class="form-control" placeholder="City*">
+                  <input type="text" class="form-control" placeholder="Street*" value="{{customerpaymentinfo.street}}">
+                  <input type="text" class="form-control" placeholder="Apt/Ste/PO" value="{{customerpaymentinfo.po}}">
+                  <input type="text" class="form-control" placeholder="City*" value="{{customerpaymentinfo.city}}">
                   <select class="form-control">
                     <option data-display="State">State</option>
                     <option value="1">Kolkata</option>
                     <option value="2">Delhi</option>
                   </select>
-                  <input type="text" class="form-control" placeholder="Zip*">
+                  <input type="text" class="form-control" placeholder="Zip*" value="{{customerpaymentinfo.zip}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Paypal</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Account">
+                  <input type="text" class="form-control" placeholder="Account" value="{{customerpaymentinfo.paypal}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Venmo</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Account">
+                  <input type="text" class="form-control" placeholder="Account" value="{{customerpaymentinfo.venmo}}">
                 </div>
               </div>
             </div>
@@ -199,29 +197,29 @@
               <div class="form-inner">
                 <div class="f-name">Group</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Name">
-                  <input type="text" class="form-control" placeholder="Title">
+                  <input type="text" class="form-control" placeholder="Name" value="{{customerprofessionalinfo.emp_name}}">
+                  <input type="text" class="form-control" placeholder="Title" value="{{customerprofessionalinfo.title}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Contact</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Work Phone*">
-                  <input type="text" class="form-control" placeholder="Email*">
+                  <input type="text" class="form-control" placeholder="Work Phone*" value="{{customerprofessionalinfo.work_phone}}">
+                  <input type="text" class="form-control" placeholder="Email*" value="{{customerprofessionalinfo.work_email}}">
                 </div>
               </div>
               <div class="form-inner">
                 <div class="f-name">Address</div>
                 <div class="form-field drop-d">
-                  <input type="text" class="form-control" placeholder="Street*">
-                  <input type="text" class="form-control" placeholder="Bldg/Ste/PO">
-                  <input type="text" class="form-control" placeholder="City*">
+                  <input type="text" class="form-control" placeholder="Street*" value="{{customerprofessionalinfo.street}}">
+                  <input type="text" class="form-control" placeholder="Bldg/Ste/PO" value="{{customerprofessionalinfo.po}}">
+                  <input type="text" class="form-control" placeholder="City*" value="{{customerprofessionalinfo.city}}">
                   <select class="form-control">
                     <option data-display="State">State</option>
                     <option value="1">Kolkata</option>
                     <option value="2">Delhi</option>
                   </select>
-                  <input type="text" class="form-control" placeholder="Zip*">
+                  <input type="text" class="form-control" placeholder="Zip*" value="{{customerprofessionalinfo.zip}}">
                 </div>
               </div>
             </div>
@@ -229,13 +227,13 @@
               <div class="form-inner">
                 <div class="f-name">Payment</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Debit/Credit">
+                  <input type="text" class="form-control" placeholder="Debit/Credit" value="{{ customerpaymentinfo.card_type }}">
                   <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Account">
+                    <input type="text" class="form-control" placeholder="Account" value="{{ customerpaymentinfo.account_number }}">
                     <span class="eye-icon"><i class="fa fa-eye" aria-hidden="true"></i></span> </div>
-                  <input type="text" class="form-control" placeholder="Expiration">
-                  <input type="text" class="form-control" placeholder="Name on Card">
-                  <input type="text" class="form-control" placeholder="Security Code">
+                  <input type="text" class="form-control" placeholder="Expiration" value="{{ customerpaymentinfo.expiration }}">
+                  <input type="text" class="form-control" placeholder="Name on Card" value="{{ customerpaymentinfo.name_on_card }}">
+                  <input type="text" class="form-control" placeholder="Security Code" value="{{ customerpaymentinfo.security_code }}">
                 </div>
               </div>
               <div class="form-inner">
@@ -286,11 +284,11 @@
               <div class="form-inner">
                 <div class="f-name">User</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Username" value="{{customerpersonalinfo.email}}">
                   <div class="position-relative">
                     <input type="password" class="form-control" placeholder="Password">
                     <span class="eye-icon"><i class="fa fa-eye" aria-hidden="true"></i></span> </div>
-                  <input type="text" class="form-control" placeholder="ID">
+                  <input type="text" class="form-control" placeholder="ID" value="{{customerpersonalinfo.customerid}}">
                 </div>
               </div>
               <div class="form-inner">
