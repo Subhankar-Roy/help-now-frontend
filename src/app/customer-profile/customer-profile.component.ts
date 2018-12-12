@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../customer';
+import { CustomerService } from '../services/customer.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-customer-profile',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerProfileComponent implements OnInit {
 
-  constructor() { }
+  customerServiceResp: Observable<any>;
+  constructor(private cs: CustomerService) { }
+
+  customer: Customer = {
+    first_name: "Gargi",
+    middle_name: "",
+    last_name: "Pal"
+  };
+
 
   ngOnInit() {
+
+  }
+
+  getPersonalInfo(): void {
+    this.customerServiceResp = this.cs.getCustomerPersonalinfo();
+
   }
 
 }

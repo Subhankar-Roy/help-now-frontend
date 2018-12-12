@@ -1,5 +1,5 @@
 <section class="search-bg cavail">
-<app-header></app-header>
+  <app-header></app-header>
   <div class="clearfix"></div>
   <div class="container">
     <div class="row">
@@ -67,9 +67,12 @@
     </div>
     <div role="tabpanel" class="profile-tab">
       <ul class="nav nav-tabs f-none nav-justified nav-tabs-dropdown tab-menu p-tab-cuctom" role="tablist">
-        <li role="presentation"> <a href="#personal" class="active" aria-controls="personal" role="tab" data-toggle="tab">Personal</a> </li>
-        <li role="presentation"> <a href="#professional" class="" aria-controls="professional" role="tab" data-toggle="tab">Professional</a> </li>
-        <li role="presentation"> <a href="#account" class="" aria-controls="account" role="tab" data-toggle="tab">Account</a> </li>
+        <li role="presentation"> <a href="#personal" class="active" aria-controls="personal" role="tab" data-toggle="tab">Personal</a>
+        </li>
+        <li role="presentation"> <a href="#professional" class="" aria-controls="professional" role="tab" data-toggle="tab">Professional</a>
+        </li>
+        <li role="presentation"> <a href="#account" class="" aria-controls="account" role="tab" data-toggle="tab">Account</a>
+        </li>
         <!-- <li role="presentation">
                   <a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Activity</a>
                   </li>-->
@@ -82,9 +85,9 @@
               <div class="form-inner">
                 <div class="f-name">Name</div>
                 <div class="form-field">
-                  <input type="text" class="form-control" placeholder="First">
-                  <input type="text" class="form-control" placeholder="Middle">
-                  <input type="text" class="form-control" placeholder="Last">
+                  <input type="text" class="form-control" placeholder="First" value="{{customer.first_name }}">
+                  <input type="text" class="form-control" placeholder="Middle" value="{{customer.middle_name }}">
+                  <input type="text" class="form-control" placeholder="Last" value="{{customer.last_name}}">
                 </div>
               </div>
               <div class="form-inner">
@@ -441,86 +444,87 @@
                   <div class="availability-table mt0 property-table-scroll">
                     <table id="example" class="display" cellspacing="0" width="100%">
                       <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Street</th>
-                        <th>Street</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Zip</th>
-                        <th>Area</th>
-                      </tr>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Street</th>
+                          <th>Street</th>
+                          <th>City</th>
+                          <th>State</th>
+                          <th>Zip</th>
+                          <th>Area</th>
+                        </tr>
                       </thead>
                       <tbody>
-                      <tr>
-                        <td><label class="custom-check checkbox2">
-                          <input type="checkbox">
-                          <span class="checkmark3 row-check"></span></label>
-                          Home</td>
-                        <td>Residential</td>
-                        <td>25 Morningside</td>
-                        <td>Apt A12</td>
-                        <td>Salt Lake City</td>
-                        <td>Utah (UT) </td>
-                        <td>84151</td>
-                        <td>3,450 sqft</td>
-                      </tr>
-                      <tr>
-                        <td><label class="custom-check checkbox2">
-                          <input type="checkbox">
-                          <span class="checkmark3 row-check"></span></label>
-                          Cabin</td>
-                        <td>Residential</td>
-                        <td>15 Marmalade</td>
-                        <td>Apt A12</td>
-                        <td>Bear Creek</td>
-                        <td>Utah (UT) </td>
-                        <td>84037</td>
-                        <td>2,300 sqft</td>
-                      </tr>
-                      <tr>
-                        <td><label class="custom-check checkbox2">
-                          <input type="checkbox">
-                          <span class="checkmark3 row-check"></span></label>
-                          Rental</td>
-                        <td>Residential</td>
-                        <td>7 Brigham Lane</td>
-                        <td>Apt A12</td>
-                        <td>Holiday</td>
-                        <td>Utah (UT) </td>
-                        <td>84154</td>
-                        <td>1,200 sqft</td>
-                      </tr>
-                      <tr>
-                        <td><label class="custom-check checkbox2">
-                          <input type="checkbox">
-                          <span class="checkmark3 row-check"></span></label>
-                          Rental</td>
-                        <td>Commercial</td>
-                        <td>126 Skyline</td>
-                        <td>Apt D2</td>
-                        <td>Holiday</td>
-                        <td>Utah (UT) </td>
-                        <td>84154</td>
-                        <td>1,200 sqft</td>
-                      </tr>
-                      <tr>
-                        <td><label class="custom-check checkbox2">
-                          <input type="checkbox">
-                          <span class="checkmark3 row-check"></span></label>
-                          Warehouse</td>
-                        <td>Industrial</td>
-                        <td>14 Distribution</td>
-                        <td>Apt C15</td>
-                        <td>Saratoga</td>
-                        <td>Utah (UT) </td>
-                        <td>84150</td>
-                        <td>30,500 sqft</td>
-                      </tr>
+                        <tr>
+                          <td><label class="custom-check checkbox2">
+                              <input type="checkbox">
+                              <span class="checkmark3 row-check"></span></label>
+                            Home</td>
+                          <td>Residential</td>
+                          <td>25 Morningside</td>
+                          <td>Apt A12</td>
+                          <td>Salt Lake City</td>
+                          <td>Utah (UT) </td>
+                          <td>84151</td>
+                          <td>3,450 sqft</td>
+                        </tr>
+                        <tr>
+                          <td><label class="custom-check checkbox2">
+                              <input type="checkbox">
+                              <span class="checkmark3 row-check"></span></label>
+                            Cabin</td>
+                          <td>Residential</td>
+                          <td>15 Marmalade</td>
+                          <td>Apt A12</td>
+                          <td>Bear Creek</td>
+                          <td>Utah (UT) </td>
+                          <td>84037</td>
+                          <td>2,300 sqft</td>
+                        </tr>
+                        <tr>
+                          <td><label class="custom-check checkbox2">
+                              <input type="checkbox">
+                              <span class="checkmark3 row-check"></span></label>
+                            Rental</td>
+                          <td>Residential</td>
+                          <td>7 Brigham Lane</td>
+                          <td>Apt A12</td>
+                          <td>Holiday</td>
+                          <td>Utah (UT) </td>
+                          <td>84154</td>
+                          <td>1,200 sqft</td>
+                        </tr>
+                        <tr>
+                          <td><label class="custom-check checkbox2">
+                              <input type="checkbox">
+                              <span class="checkmark3 row-check"></span></label>
+                            Rental</td>
+                          <td>Commercial</td>
+                          <td>126 Skyline</td>
+                          <td>Apt D2</td>
+                          <td>Holiday</td>
+                          <td>Utah (UT) </td>
+                          <td>84154</td>
+                          <td>1,200 sqft</td>
+                        </tr>
+                        <tr>
+                          <td><label class="custom-check checkbox2">
+                              <input type="checkbox">
+                              <span class="checkmark3 row-check"></span></label>
+                            Warehouse</td>
+                          <td>Industrial</td>
+                          <td>14 Distribution</td>
+                          <td>Apt C15</td>
+                          <td>Saratoga</td>
+                          <td>Utah (UT) </td>
+                          <td>84150</td>
+                          <td>30,500 sqft</td>
+                        </tr>
                       </tbody>
                     </table>
-                    <div class="plus-cont"> <a href="#"><img src="../../assets/images/add.png" alt="Add" title="Add" ></a> <a href="#"><img src="../../assets/images/trash.png" alt="Delete" title="Delete" ></a> </div>
+                    <div class="plus-cont"> <a href="#"><img src="../../assets/images/add.png" alt="Add" title="Add"></a>
+                      <a href="#"><img src="../../assets/images/trash.png" alt="Delete" title="Delete"></a> </div>
                   </div>
                 </div>
               </div>

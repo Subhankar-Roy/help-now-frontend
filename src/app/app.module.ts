@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { FooterComponent } from './footer/footer.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorhandleComponent } from './errorhandle/errorhandle.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingpageService } from './services/landingpage.service';
@@ -20,6 +20,7 @@ import { ErrorBagServiceService } from './services/error-bag-service.service';
 import { NgxMaskModule } from 'ngx-mask';
 import { ProviderGuard } from './authentication-guard/provider.guard';
 import { CustomerGuard } from './authentication-guard/customer.guard';
+import { CustomerService } from './services/customer.service';
 
 @NgModule({
   declarations: [
@@ -42,11 +43,17 @@ import { CustomerGuard } from './authentication-guard/customer.guard';
     HttpClientModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [ReactiveFormsModule, LandingpageService, AuthGuard, {
+
+  providers: [ReactiveFormsModule, LandingpageService, CustomerService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
+<<<<<<< HEAD
   }, ErrorBagServiceService, ProviderGuard, CustomerGuard],
+=======
+  }],
+
+>>>>>>> Added customer component
   bootstrap: [AppComponent]
 })
 export class AppModule { }
