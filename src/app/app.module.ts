@@ -17,7 +17,9 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { SuccessHandlerComponent } from './success-handler/success-handler.component';
 import { ErrorBagServiceService } from './services/error-bag-service.service';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { ProviderGuard } from './authentication-guard/provider.guard';
+import { CustomerGuard } from './authentication-guard/customer.guard';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import { NgxMaskModule } from 'ngx-mask'
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }, ErrorBagServiceService],
+  }, ErrorBagServiceService, ProviderGuard, CustomerGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
