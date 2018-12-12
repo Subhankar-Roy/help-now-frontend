@@ -7,12 +7,13 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { FooterComponent } from './footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ErrorhandleComponent } from './errorhandle/errorhandle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingpageService } from './services/landingpage.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './authentication-guard/auth.guard';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,11 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ReactiveFormsModule, LandingpageService, AuthGuard],
+  providers: [ReactiveFormsModule, LandingpageService, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
