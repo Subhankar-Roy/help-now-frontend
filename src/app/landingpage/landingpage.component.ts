@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ErrorBagServiceService } from '../services/error-bag-service.service';
 import { GeneralService } from '../services/general.service';
+declare var $;
 
 @Component({
   selector: 'app-landingpage',
@@ -34,6 +35,46 @@ export class LandingpageComponent implements OnInit {
     this.errArray = [];
     this.createForgotPasswordForm();
     this.isLoading = false;
+    $('.bxslider').bxSlider({
+      mode: 'horizontal',
+      moveSlides: 1,
+      slideMargin: 0,
+      infiniteLoop: true,
+      slideWidth: 378,
+      minSlides: 1,
+      maxSlides: 1,
+      speed: 800,
+      pager: false,
+      auto: true,
+      controls: true
+    });
+    $('.trust-slider').bxSlider({
+      mode: 'horizontal',
+      moveSlides: 1,
+      slideMargin: 20,
+      infiniteLoop: true,
+      slideWidth: 258,
+      minSlides: 1,
+      maxSlides: 1,
+      speed: 800,
+      pager: false,
+      auto: true,
+      controls: true
+    });
+    $('.latest-articals').bxSlider({
+      mode: 'horizontal',
+      moveSlides: 1,
+      slideMargin: 22,
+      infiniteLoop: true,
+      slideWidth: 350,
+      minSlides: 1,
+      maxSlides: 1,
+      speed: 800,
+      pager: false,
+      auto: true,
+      controls: true
+    });
+    this.loadScript('../../assets/js/range-slider.js');
   }
 
   /**
@@ -50,6 +91,13 @@ export class LandingpageComponent implements OnInit {
       is_provider: ['', Validators.required],
       zip: ['', Validators.required]
     });
+  }
+  loadScript(url) {
+    console.log('preparing to load range slider');
+    const node = document.createElement('script');
+    node.src = url;
+    node.type = 'text/javascript';
+    document.getElementsByTagName('body')[0].appendChild(node);
   }
 
   /**
