@@ -777,7 +777,10 @@
           </div>
           <div class="form-group">
             <div class="text-center">
-              <button type="submit" class="signin-btn" [disabled]="!forgotPasswordForm.valid">Reset Password</button>
+              <button type="submit" class="signin-btn" [disabled]="!forgotPasswordForm.valid || isLoading">
+                <p *ngIf="!isLoading" class="loader-dynamic">Reset Password</p>
+                <p *ngIf="isLoading" class="loader-dynamic"><i class="fa fa-spinner fa-spin"></i> Processing...</p>
+              </button>
             </div>
           </div>
         </form>

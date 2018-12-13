@@ -4,7 +4,7 @@ import { LandingpageService } from '../services/landingpage.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ErrorBagServiceService } from '../services/error-bag-service.service';
-import {environment} from '../../environments/environment';
+import { GeneralService } from '../services/general.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -24,7 +24,8 @@ export class LandingpageComponent implements OnInit {
   signUpFormResp: Observable<any>;
   signInFormResp: Observable<any>;
   forgotPasswordFormResp: Observable<any>;
-  constructor(private fb: FormBuilder, private lps: LandingpageService, private router: Router, private ebs: ErrorBagServiceService) { }
+  isLoading: boolean;
+  constructor(private fb: FormBuilder, private lps: LandingpageService, private router: Router, private ebs: ErrorBagServiceService, private gs: GeneralService) { }
   ngOnInit() {
     this.createRegistrationForm();
     this.createLoginForm();
@@ -32,6 +33,7 @@ export class LandingpageComponent implements OnInit {
     this.errString = null;
     this.errArray = [];
     this.createForgotPasswordForm();
+    this.isLoading = false;
   }
 
   /**
@@ -86,24 +88,27 @@ export class LandingpageComponent implements OnInit {
             this.errFlg = true;
             this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + ' . Please try again later!';
             console.error(this.errString);
-            this.globalErrorTimeout();
+            // this.globalErrorTimeout();
+            this.gs.globalErrorTimeout(this);
           }
         }, error => {
           this.errFlg = true;
           this.errArray = this.ebs.ObjectToKey(error.error.response, Object.keys(error.error.response)[0]);
-          this.globalErrorTimeout();
+          // this.globalErrorTimeout();
+          this.gs.globalErrorTimeout(this);
         });
       } else {
         this.errFlg = true;
         this.errString = 'Password and confirm password did not match!';
-        console.error(this.errString);
-        this.globalErrorTimeout();
+        // this.globalErrorTimeout();
+        this.gs.globalErrorTimeout(this);
       }
     } else {
       this.errFlg = true;
       this.errString = 'Please fill up the form correctly';
       console.error(this.errString);
-      this.globalErrorTimeout();
+      // this.globalErrorTimeout();
+      this.gs.globalErrorTimeout(this);
     }
   }
   /**
@@ -122,19 +127,22 @@ export class LandingpageComponent implements OnInit {
           this.errFlg = true;
           this.errString = 'Failed to sign you In ' + this.loginForm.value.email + ' . Please try again later!';
           console.error(this.errString);
-          this.globalErrorTimeout();
+          // this.globalErrorTimeout();
+          this.gs.globalErrorTimeout(this);
         }
       }, error => {
         this.errFlg = true;
         this.errString = error.error.response;
         console.error(this.errString);
-        this.globalErrorTimeout();
+        // this.globalErrorTimeout();
+        this.gs.globalErrorTimeout(this);
       });
     } else {
       this.errFlg = true;
       this.errString = 'Please fill up the form correctly';
       console.error(this.errString);
-      this.globalErrorTimeout();
+      // this.globalErrorTimeout();
+      this.gs.globalErrorTimeout(this);
     }
   }
 
@@ -144,26 +152,26 @@ export class LandingpageComponent implements OnInit {
   forgotPasswordRequest() {
     if (this.forgotPasswordForm.valid) {
       this.forgotPasswordFormResp = this.lps.forgotPassword(this.forgotPasswordForm.value);
+      this.isLoading = true;
       this.forgotPasswordFormResp.subscribe(data => {
-        console.log(data);
+        if (data.status) {
+          this.successFlg = true;
+          this.successString = data.response;
+          this.isLoading = false;
+          // this.globalSuccessTimeout();
+          this.gs.globalSuccessTimeout(this);
+        }
       }, error => {
+        this.isLoading = false;
         this.errFlg = true;
         this.errString = error.error.response;
-        this.globalErrorTimeout();
+        // this.globalErrorTimeout();
+        this.gs.globalErrorTimeout(this);
       });
     } else {
+      this.isLoading = false;
       this.errFlg = true;
       this.errString = 'Please fill up the form correctly!';
     }
-  }
-
-  /**
-   * Hides error message after a certain period
-   */
-  globalErrorTimeout() {
-    const con = this;
-    setTimeout(function () {
-      con.errFlg = false;
-    }, environment.GLOBAL_ERR_TIMEOUT);
   }
 }

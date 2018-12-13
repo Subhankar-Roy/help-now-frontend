@@ -19,6 +19,11 @@ import { ErrorBagServiceService } from './services/error-bag-service.service';
 import { NgxMaskModule } from 'ngx-mask';
 import { ProviderGuard } from './authentication-guard/provider.guard';
 import { CustomerGuard } from './authentication-guard/customer.guard';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { PasswordResetService } from './services/password-reset.service';
+import { MomentModule } from 'ngx-moment';
+import { GeneralService } from './services/general.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,9 @@ import { CustomerGuard } from './authentication-guard/customer.guard';
     ProfileComponent,
     CustomerProfileComponent,
     ErrorHandlerComponent,
-    SuccessHandlerComponent
+    SuccessHandlerComponent,
+    PasswordResetComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,13 +45,14 @@ import { CustomerGuard } from './authentication-guard/customer.guard';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MomentModule
   ],
   providers: [ReactiveFormsModule, LandingpageService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }, ErrorBagServiceService, ProviderGuard, CustomerGuard],
+  }, ErrorBagServiceService, ProviderGuard, CustomerGuard, PasswordResetService, GeneralService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
