@@ -24,6 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PasswordResetService } from './services/password-reset.service';
 import { MomentModule } from 'ngx-moment';
 import { GeneralService } from './services/general.service';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { VerifyEmailService } from './services/verify-email.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { GeneralService } from './services/general.service';
     ErrorHandlerComponent,
     SuccessHandlerComponent,
     PasswordResetComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,7 @@ import { GeneralService } from './services/general.service';
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }, ErrorBagServiceService, ProviderGuard, CustomerGuard, PasswordResetService, GeneralService],
+  }, ErrorBagServiceService, ProviderGuard, CustomerGuard, PasswordResetService, GeneralService, VerifyEmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

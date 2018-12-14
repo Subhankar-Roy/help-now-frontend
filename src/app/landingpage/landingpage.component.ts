@@ -124,6 +124,7 @@ export class LandingpageComponent implements OnInit {
   onSubmit() {
     if (this.registerForm.valid) {
       if (this.registerForm.value.password === this.registerForm.value.confirm_password) {
+        this.isLoading = true;
         this.signUpFormResp = this.lps.signUp(this.registerForm.value);
         this.signUpFormResp.subscribe(data => {
           if (data.status) {
@@ -131,27 +132,32 @@ export class LandingpageComponent implements OnInit {
             document.getElementById('register').click();
             localStorage.setItem('_token', data.response.metadata.original.response.token);
             localStorage.setItem('_cu', JSON.stringify(data.response.metadata.original.response.authenticated_user));
+            this.isLoading = false;
             this.router.navigate([this.registerForm.value.is_provider ? 'provider-profile' : 'customer-profile']);
           } else {
+            this.isLoading = false;
             this.errFlg = true;
-            this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + ' . Please try again later!';
+            this.errString = 'Failed to sign you up ' + this.registerForm.value.first_name + '. Please try again later!';
             console.error(this.errString);
             // this.globalErrorTimeout();
             this.gs.globalErrorTimeout(this);
           }
         }, error => {
+          this.isLoading = false;
           this.errFlg = true;
           this.errArray = this.ebs.ObjectToKey(error.error.response, Object.keys(error.error.response)[0]);
           // this.globalErrorTimeout();
           this.gs.globalErrorTimeout(this);
         });
       } else {
+        this.isLoading = false;
         this.errFlg = true;
         this.errString = 'Password and confirm password did not match!';
         // this.globalErrorTimeout();
         this.gs.globalErrorTimeout(this);
       }
     } else {
+      this.isLoading = false;
       this.errFlg = true;
       this.errString = 'Please fill up the form correctly';
       console.error(this.errString);

@@ -746,7 +746,10 @@
           </div>
           <div class="form-group">
             <div class="text-center">
-              <button type="submit" class="signin-btn" [disabled]="!registerForm.valid">Sign Up</button>
+              <button type="submit" class="signin-btn" [disabled]="!registerForm.valid || isLoading">
+                <p *ngIf="!isLoading" class="loader-dynamic">Sign Up</p>
+                <p *ngIf="isLoading" class="loader-dynamic"><i class="fa fa-spinner fa-spin"></i> Processing...</p>
+              </button>
             </div>
           </div>
         </form>

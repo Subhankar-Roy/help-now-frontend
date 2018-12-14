@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GeneralService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   /**
    * Hides error message after a certain period
    */
@@ -25,5 +26,13 @@ export class GeneralService {
     setTimeout(function () {
       con.successFlg = false;
     }, environment.GLOBAL_ERR_TIMEOUT);
+  }
+
+  /**
+   * check user status verified or not
+   * @param userData
+   */
+  checkStatusUser(userData: any) {
+    return this.http.post(environment.API_URL + 'check-user-status/', userData);
   }
 }

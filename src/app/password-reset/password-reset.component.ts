@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PasswordResetService } from '../services/password-reset.service';
-import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeneralService } from '../services/general.service';
 
